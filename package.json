@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack -wd"
+    "webpack": "webpack -wd",
+    "nodemon": "nodemon --exec babel-node server/index"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "ejs": "^2.5.7",
     "express": "^4.15.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

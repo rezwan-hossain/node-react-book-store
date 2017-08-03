@@ -1,14 +1,18 @@
-
-const express = require('express');
-
+const express = require("express");
 const app = express();
+import serverRender from './render';
+//app.use(express.static("../client/"));
 
-// app.get('/', function(req, res){
-//   res.sendFile(__dirname + '..client/index.html')
-// })
+app.set("view engine", "ejs");
 
-app.use(express.static('../client/'));
 
-app.listen(3000, function(){
-  console.log('server is running')
-})
+
+app.get("/", (req, res) => {
+  res.render('index',  {
+    content: serverRender()
+  });
+});
+
+app.listen(3000, () => {
+  console.log("server is running");
+});
