@@ -5,6 +5,8 @@ const app = express();
 // babel-node  to run our server
 import serverRender from "./render";
 import apiRouter from "./apiRouter";
+const cors = require("cors");
+app.use(cors())
 
 app.set("view engine", "ejs");
 
