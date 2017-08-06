@@ -4,7 +4,7 @@ const app = express();
 // coz import not form node. we need to use
 // babel-node  to run our server
 import serverRender from "./render";
-//app.use(express.static("../client/"));
+import apiRouter from "./apiRouter";
 
 app.set("view engine", "ejs");
 
@@ -13,6 +13,8 @@ app.get("/", (req, res) => {
     content: serverRender()
   });
 });
+
+app.use("/api", apiRouter);
 
 app.listen(3000, () => {
   console.log("server is running");
