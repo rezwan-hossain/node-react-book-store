@@ -19,6 +19,7 @@
     "babel-preset-react": "^6.24.1",
     "ejs": "^2.5.7",
     "express": "^4.15.3",
+    "pg": "^7.1.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "webpack": "^2.6.1"
