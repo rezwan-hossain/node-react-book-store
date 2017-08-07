@@ -3,16 +3,18 @@ const app = express();
 // import not going to work in node index.js
 // coz import not form node. we need to use
 // babel-node  to run our server
-import serverRender from "./render";
+//import serverRender from "./render";
 import apiRouter from "./apiRouter";
 const cors = require("cors");
-app.use(cors())
+app.use(cors());
 
 app.set("view engine", "ejs");
 
+app.use(express.static("client"));
+
 app.get("/", (req, res) => {
   res.render("index", {
-    content: serverRender()
+    content: ""//serverRender()
   });
 });
 
