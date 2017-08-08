@@ -4,25 +4,17 @@ import BookList from "./BookList";
 import axios from "axios"; // http client
 
 export default class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      books: undefined
+      books: this.props.initialData
     }
+
   }
 
-  componentDidMount() {
-    // make ajax request
-    axios.get("http://localhost:3000/api/books/")
-    .then(resp => {
-      console.log(resp)
-      this.setState({
-        books: resp.data 
-      })
-    });
-  }
 
   render() {
+    debugger;
     return (
       <div>
         {
