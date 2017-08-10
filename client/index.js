@@ -4,6 +4,6 @@ import axios from "axios";
 import App from "./components/App";
 
 ReactDOM.render(
-  <App initialData={resp.data} />,
+  <App initialData={ window.__initialData__ } />,
   document.getElementById("root")
 );

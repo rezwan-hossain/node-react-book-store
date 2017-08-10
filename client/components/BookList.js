@@ -12,7 +12,9 @@ class BookList extends React.Component {
     return (
       <div>
         {this.props.books.map(book => 
-          <Book key={book.id} {...book}/>
+          <Book key={book.id} 
+            onClick = {this.props.onBookClick}
+              {...book}/>
         )}
       </div>
     );
